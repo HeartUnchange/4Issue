@@ -34,7 +34,9 @@ router.beforeEach((to, from, next) => {
 
 router.afterEach((to, from) => {
   let loadingInstance = Loading.service({ fullscreen: true });
-  loadingInstance.close();
+  Vue.nextTick(() => {
+    loadingInstance.close();
+  });
 });
 
 new Vue({
