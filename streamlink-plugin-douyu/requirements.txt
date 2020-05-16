@@ -1,0 +1,2 @@
+requests==2.23.0
+jsbeautifier==1.11.0
